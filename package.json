@@ -1,0 +1,26 @@
+{
+  "name": "jimmytech-dashboard",
+  "version": "1.0.0",
+  "description": "Jimmy Tech Dashboard",
+  "author": "Jimmy Tech",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win nsis --publish never"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/cli": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.jimmytech.dashboard",
+    "productName": "Jimmy Tech Dashboard",
+    "files": ["electron/**", "www/**", "build/icon.png"],
+    "directories": { "output": "dist" },
+    "win": { "icon": "build/icon.png" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
